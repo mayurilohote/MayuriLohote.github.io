@@ -1,0 +1,278 @@
+html{scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif
+}
+
+body{
+background:linear-gradient(180deg,#020617,#0f172a);
+color:#e5e7eb;
+line-height:1.6
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(2,6,23,.95);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.navbar nav {
+  margin-left: auto;
+}
+
+.navbar a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+}
+/* HERO */
+
+.hero{
+padding:140px 20px 60px 20px;  /* top padding accounts for fixed navbar */
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center
+}
+.hero p {
+    margin-top: 20px;
+}
+
+.hero h2{font-size:2.8rem;margin-bottom:15px}
+
+/* SECTIONS */
+
+.section{padding:70px 70px}
+
+
+h2{font-size:2.2rem;margin-bottom:40px}
+
+/* PROJECTS */
+
+.case-study {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto 70px auto;
+}
+
+.case-study.reverse{flex-direction:row-reverse}
+
+/* .project-img{
+width:420px;
+border-radius:18px;
+box-shadow:0 15px 30px rgba(0,0,0,.5);
+transition:.4s
+} */
+
+.project-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+.project-img:hover{transform:scale(1.03)}
+
+.project-info{max-width:500px}
+
+.project-info ul{margin:10px 0 15px 20px}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px
+}
+
+.skill-card{
+background:rgba(30,41,59,.9);
+padding:28px;
+border-radius:18px;
+transition:.3s
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,.4)
+}
+
+.skill-card ul{list-style:none}
+
+/* BUTTON */
+
+.resume-btn{
+margin-top:25px;
+padding:12px 28px;
+background:#38bdf8;
+color:#020617;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s
+}
+
+.resume-btn:hover{transform:scale(1.05)}
+/* CONTACT SECTION */
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-title {
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  margin-bottom: 70px;  /* important spacing */
+  color: #94a3b8;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;  /* large middle spacing like screenshot */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+.contact-text {
+  margin-bottom: 40px;
+  color: #94a3b8;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(30,41,59,.9);
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+.contact-box i {
+  font-size: 1.4rem;
+  color: #38bdf8;
+}
+
+.contact-box span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.contact-box p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.availability-box {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(90deg,#f97316,#a855f7);
+  color: white;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 18px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(30,41,59,.9);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-btn {
+  padding: 18px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg,#f97316,#a855f7);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+/* Mobile Responsive */
+
+@media (max-width: 900px) {
+
+.navbar {
+    padding: 15px 30px;
+}
+
+.section {
+    padding: 90px 30px;
+}
+
+.case-study {
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: 2.1rem;
+}
+
+
+.skills-grid {
+    grid-template-columns: 1fr;
+}
+}
+.toggle-btn{
+background:none;
+border:none;
+color:white;
+font-size:1.2rem;
+cursor:pointer;
+margin-left:20px
+}
+
+/* Light Mode */
+
+body.light{
+background:#f8fafc;
+color:#020617
+}
+
+body.light .navbar{
+background:#ffffff;
+}
+
+body.light .skill-card,
+body.light .project-info{
+background:#e5e7eb;
+color:#020617
+}
